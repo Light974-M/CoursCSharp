@@ -6,10 +6,11 @@ namespace CharacterValue
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("tapez un caractère : ")
-            string Caract = Console.ReadLine();
-            byte[] asciiBytes = Encoding.ASCII.GetBytes(Caract);
-            Console.WriteLine("vous avez entré : " + Caract + " cela correspond en chiffre à : " + asciiBytes);
+            Console.WriteLine("tapez un caractère : ");
+            ConsoleKeyInfo consoleKeyInf = Console.ReadKey();
+            char CharacterRead = consoleKeyInf.KeyChar;
+            int valCaracter = CharacterRead;
+            Console.WriteLine("vous avez entré : " + CharacterRead + " cela correspond en chiffre à : " + valCaracter);
         }
     }
 }

@@ -64,7 +64,7 @@ Exo 3 : "Initialisation valide", dire si la valeur assignée est valide.
 
 1) float f2 = 1.0f; oui
 2) short s3 = 1.0; non 
-3) float f3 = 1.0; oui
+3) float f3 = 1.0; non
 4) int i1 = 1; oui
 5) double d1 = 1; oui
 6) int i2 = 1.0f; non
