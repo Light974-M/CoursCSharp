@@ -20,6 +20,7 @@ namespace les_boucles
        
            DisplayAllCharacters(3);
            DisplayTriangle(8);
+           DisplayDiamond(10);
         }
 
         static void DisplayAllNumbers(int number)
@@ -78,17 +79,42 @@ namespace les_boucles
 
         static void DisplayDiamond(int number)
         {
-            string astérix = "";
+            string astérix = "*";
+            string asterixMemory = astérix;
+            int CountDown = 1;
+            int CountUp = 1;
             
-            for(int i = 0; i <= number; i++)
+            for(int i = 0; i < number; i++)
             {
-                astérix = astérix + "*";
+                astérix = asterixMemory;
+                for(int j = 0; j <= number+CountDown; j++)
+                {
+                    astérix = " " + astérix + " ";
+                }
+                CountDown -= 1;
+                Console.WriteLine(astérix);
+                astérix = asterixMemory;
+                asterixMemory = asterixMemory + "**";
             }
+            CountUp = -3;
+            CountDown += 2;
 
-            for(int i = 0; i <= number; i++)
+            for(int k = 0; k < number -1; k++)
             {
-                astérix = " " + astérix;
+                astérix = "*";
+                for(int l = 0; l <= number+CountUp; l++)
+                {
+                    astérix = "*" + astérix + "*";
+                }
+
+                for(int j = 0; j <= number+CountDown; j++)
+                {
+                    astérix = " " + astérix + " ";
+                }
+                CountDown += 1;
+                CountUp -= 1;
+                Console.WriteLine(astérix);
             }
-        }
+        }   
     }
 }
