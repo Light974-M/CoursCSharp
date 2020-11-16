@@ -20,7 +20,7 @@ namespace les_boucles
        
            DisplayAllCharacters(3);
            DisplayTriangle(8);
-           DisplayDiamond(10);
+           DisplayDiamond(100);
         }
 
         static void DisplayAllNumbers(int number)
